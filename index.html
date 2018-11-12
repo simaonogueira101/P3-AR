@@ -14,11 +14,12 @@
         <a-assets>
             <a-asset-item id="obj" src="model.obj"></a-asset-item>
             <a-asset-item id="mtl" src="materials.mtl"></a-asset-item>
+            <video id="video" autoplay loop="true" src="video.mp4"></video>
         </a-assets>
 
         <a-marker type='pattern' url='tv.patt'>
-            <a-entity id="model" obj-model="obj: #obj; mtl: #mtl" scale="2">
-            </a-entity>
+            <a-entity id="model" obj-model="obj: #obj; mtl: #mtl" scale="2"></a-entity>
+            <a-video src="#video" width="4" height="3" position="0 0 -20"></a-video>
         </a-marker>
 
         <!-- use this <a-entity camera> to support multiple-markers, otherwise use <a-marker-camera> instead of </a-marker> -->
