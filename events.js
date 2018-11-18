@@ -13,7 +13,11 @@ AFRAME.registerComponent('markerhandler', {
               "Marker 1 not detected."
             }
         });
+}});
 
+
+AFRAME.registerComponent('markerhandler2', {
+    init: function() {
         // 2
         const animatedMarker2 = document.querySelector("#animated-marker2");
         const aEntity2 = document.querySelector("#model2");
