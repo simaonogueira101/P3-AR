@@ -14,13 +14,13 @@
 
         <a-assets>
             <a-asset-item id="obj" src="model.obj"></a-asset-item>
-            <a-asset-item id="mtl" src="materials.mtl"></a-asset-item>
+            <!-- <a-asset-item id="mtl" src="model.mtl"></a-asset-item> -->
             <video id="video" autoplay loop="true" src="video.mp4" webkit-playsinline></video>
         </a-assets>
 
         <a-marker type='pattern' url='tv.patt'>
-            <a-entity id="model" obj-model="obj: #obj; mtl: #mtl" scale="1 1 1" rotation="0 180 0"></a-entity>
-            <a-plane color="#ff1313" height="10" width="10" rotation="-90 0 0" position="0 -10 0"></a-plane>
+            <a-entity id="model" obj-model="obj: #obj" scale="0.5 0.5 0.5" rotation="0 180 0" position="0 1 0"></a-entity>
+            <a-plane color="#4A7EA5" height="5" width="5" rotation="-90 0 0"></a-plane>
         </a-marker>
 
         <a-marker type='pattern' url='tv2.patt'>
