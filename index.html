@@ -9,6 +9,8 @@
     <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
     <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
 
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+
     <script src="events.js"></script>
 </head>
 
@@ -27,23 +29,18 @@
         </a-assets>
 
         <a-marker markerhandler type='pattern' url='/markers/tv.patt' id="animated-marker" emitevents="true" cursor="fuse: false; rayOrigin: mouse">
+          
+            <a-entity position="0 2.25 -15" particle-system="color: #EF0000,#44CC00"></a-entity>
+
             <a-entity id="model" obj-model="obj: #obj" scale="0.1 0.1 0.1" rotation="0 270 0" position="0 0.25 0"></a-entity>
             <a-plane color="#4A7EA5" height="1.3" width="1.3" rotation="-90 0 0"></a-plane>
             <a-entity
               text="
-                value:
-                  The  lions  were  coming.  And  again George  Hadley  was  filled  with admiration for the mechanical  genius who had conceived this room.
-
-                  A miracle of efficiency selling for an absurdly low price. Every home should have one.
-
-                  Oh,  occasionally  they  frightened  you with their clinical accuracy, they startled you, gave you a twinge, but most of the time what fun for everyone, not only  your own  son and daughter, but for  yourself when you felt like a quick jaunt to a foreign land, a quick change of scenery. Well, here it was!
-
-                  And here were the lions now, fifteen  feet away, so real, so feverishly and startlingly real that you could feel the prickling fur on your hand, and your mouth was stuffed with the dusty upholstery smell of their heated pelts, and  the yellow  of  them  was in your  eyes like the yellow  of  an exquisite French  tapestry, the yellows of  lions and  summer grass, and the sound  of  the matted lion lungs  exhaling on  the silent noontide, and the smell of meat from the panting, dripping mouths.
-                ;
+                value: nursery;
                 font: /fonts/sangbleuempireblack.fnt;
                 fontImage: /fonts/sangbleuempireblack.png;
                 width: 4;
-                align: left
+                align: center
               "
               rotation="-90 0 0"
               position="0 0.15 0"
@@ -85,6 +82,7 @@
           <a-plane color="#841924" height="1.3" width="1.3" rotation="-90 0 0"></a-plane>
 
           <a-entity
+            id="text6-1"
             text="
               value:
                 hurt
@@ -99,6 +97,7 @@
             >
             <a-animation
               attribute="rotation"
+              begin="model6-1"
               dur="10000"
               fill="forwards"
               to="0 0 0"
@@ -107,10 +106,11 @@
             </a-animation>
             <a-animation
               attribute="position"
+              begin="model6-1"
               dur="10000"
               fill="forwards"
               from="0 0.15 0"
-              to="-1 1 0"
+              to="0 1 -1"
               easing="linear"
             >
             </a-animation>
