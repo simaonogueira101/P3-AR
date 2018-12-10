@@ -29,9 +29,6 @@
         </a-assets>
 
         <a-marker markerhandler type='pattern' url='/markers/tv.patt' id="animated-marker" emitevents="true" cursor="fuse: false; rayOrigin: mouse">
-
-            <a-entity position="0 2.25 -15" particle-system="color: #EF0000,#44CC00"></a-entity>
-
             <a-entity id="model" obj-model="obj: #obj" scale="0.1 0.1 0.1" rotation="0 270 0" position="0 0.25 0"></a-entity>
             <a-plane color="#4A7EA5" height="1.3" width="1.3" rotation="-90 0 0"></a-plane>
             <a-entity
@@ -62,30 +59,76 @@
           <a-plane color="#65A895" height="1.3" width="1.3" rotation="-90 0 0"></a-plane>
 
           <a-entity
+            id="entity2"
             text="
               value: they live
               for the
               nursery;
               font: /fonts/sangbleuempireblack.fnt;
               fontImage: /fonts/sangbleuempireblack.png;
-              width: 4;
-              align: right
+              align: right;
+              width: 10;
+              wrapCount: 50;
+              opacity: 0
             "
             rotation="-90 0 0"
-            position="0 0.15 0"
-            material="opacity: 0"
+            position="-5 0 0"
             >
             <a-animation
-              attribute="material.opacity; transparent: true"
-              dur="3000"
+              attribute="text.opacity"
+              dur="500"
               easing="linear"
               from="0"
               to="1"
               direction="alternate"
-              repeat="indefinite"
-            >
+              repeat="indefinite">
             </a-animation>
           </a-entity>
+
+          <a-entity
+            id="entity22"
+            text="
+              value: they live
+              for the
+              nursery;
+              font: /fonts/sangbleuempireblack.fnt;
+              fontImage: /fonts/sangbleuempireblack.png;
+              align: right;
+              width: 10;
+              wrapCount: 50;
+              opacity: 0
+            "
+            rotation="-90 0 0"
+            position="-5 0 0"
+            >
+            <a-animation
+              attribute="text.opacity"
+              dur="500"
+              easing="linear"
+              from="0"
+              to="1"
+              direction="alternate"
+              repeat="indefinite">
+            </a-animation>
+          </a-entity>
+
+          <script>
+            setInterval(function(){
+              var randomX = Math.floor(Math.random()*6) - 8
+              var randomZ = Math.floor(Math.random()*8) - 5
+              document.querySelector("#entity2").getAttribute("position").setX(randomX)
+              document.querySelector("#entity2").getAttribute("position").setZ(randomZ)
+            }, 500);
+
+            setTimeout(function(){
+              setInterval(function(){
+                var randomX2 = Math.floor(Math.random()*6) - 8
+                var randomZ2 = Math.floor(Math.random()*8) - 5
+                document.querySelector("#entity22").getAttribute("position").setX(randomX2)
+                document.querySelector("#entity22").getAttribute("position").setZ(randomZ2)
+              }, 500);
+            }, 500)
+          </script>
         </a-marker>
 
         <a-marker markerhandler3 type='pattern' url='/markers/tv3.patt' id="animated-marker3" emitevents="true" cursor="fuse: false; rayOrigin: mouse">
@@ -104,42 +147,46 @@
         </a-marker>
 
         <a-marker markerhandler6 type='pattern' url='/markers/tv6.patt' id="animated-marker6" emitevents="true" cursor="fuse: false; rayOrigin: mouse">
-          <a-entity id="model6" obj-model="obj: #obj6" scale="0.1 0.1 0.1" rotation="0 270 0" position="0 0.25 0"></a-entity>
+          <a-entity id="model6" obj-model="obj: #obj6" position="0 0.25 0">
+            <a-animation
+              attribute="rotation"
+              dur="500"
+              fill="forwards"
+              to="0 360 0"
+              repeat="indefinite"
+              easing="linear"
+            >
+            </a-animation>
+            <a-animation
+              attribute="scale"
+              dur="1000"
+              easing="linear"
+              from="0.1 0.1 0.1"
+              to="0.5 0.5 0.5"
+              direction="alternate"
+              repeat="indefinite"
+            >
+            </a-animation>
+          </a-entity>
           <a-plane color="#841924" height="1.3" width="1.3" rotation="-90 0 0"></a-plane>
 
           <a-entity
             id="text6-1"
             text="
               value:
-                hurt
+                And then
+                they heard
+                the sounds.
               ;
               font: /fonts/sangbleuempireblack.fnt;
               fontImage: /fonts/sangbleuempireblack.png;
-              width: 40;
-              align: center
+              width: 10;
+              wrapCount: 15;
+              align: left
             "
-            rotation="-90 0 0"
-            position="0 0.15 0"
+            rotation="0 0 0"
+            position="2.5 2.5 0"
             >
-            <a-animation
-              attribute="rotation"
-              begin="model6-1"
-              dur="10000"
-              fill="forwards"
-              to="0 0 0"
-              easing="linear"
-            >
-            </a-animation>
-            <a-animation
-              attribute="position"
-              begin="model6-1"
-              dur="10000"
-              fill="forwards"
-              from="0 0.15 0"
-              to="0 1 -1"
-              easing="linear"
-            >
-            </a-animation>
           </a-entity>
         </a-marker>
 
