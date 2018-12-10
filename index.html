@@ -73,13 +73,15 @@
             "
             rotation="-90 0 0"
             position="0 0.15 0"
+            material="opacity: 0"
             >
             <a-animation
               attribute="material.opacity"
               dur="3000"
-              fill="forwards"
+              easing="linear"
               from="0"
               to="1"
+              direction="alternate"
               repeat="indefinite"
             >
             </a-animation>
