@@ -9,7 +9,7 @@
     <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
     <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
 
-    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.11/dist/aframe-particle-system-component.min.js"></script>
 
     <script src="events.js"></script>
 </head>
@@ -29,7 +29,7 @@
         </a-assets>
 
         <a-marker markerhandler type='pattern' url='/markers/tv.patt' id="animated-marker" emitevents="true" cursor="fuse: false; rayOrigin: mouse">
-          
+
             <a-entity position="0 2.25 -15" particle-system="color: #EF0000,#44CC00"></a-entity>
 
             <a-entity id="model" obj-model="obj: #obj" scale="0.1 0.1 0.1" rotation="0 270 0" position="0 0.25 0"></a-entity>
