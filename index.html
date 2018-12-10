@@ -137,12 +137,34 @@
         </a-marker>
 
         <a-marker markerhandler4 type='pattern' url='/markers/tv4.patt' id="animated-marker4" emitevents="true" cursor="fuse: false; rayOrigin: mouse">
-          <a-entity id="model4" obj-model="obj: #obj4" scale="0.1 0.1 0.1" rotation="0 270 0" position="0 0.25 0"></a-entity>
+          <a-entity id="model4" obj-model="obj: #obj4" scale="0.1 0.1 0.1" position="0 0.25 0">
+            <a-animation
+              attribute="rotation"
+              dur="2000"
+              fill="forwards"
+              to="0 360 0"
+              repeat="indefinite"
+              easing="linear"
+            >
+            </a-animation>
+          </a-entity>
           <a-plane color="#F28D3A" height="1.3" width="1.3" rotation="-90 0 0"></a-plane>
         </a-marker>
 
         <a-marker markerhandler5 type='pattern' url='/markers/tv5.patt' id="animated-marker5" emitevents="true" cursor="fuse: false; rayOrigin: mouse">
-          <a-entity id="model5" obj-model="obj: #obj5" scale="0.1 0.1 0.1" rotation="0 270 0" position="0 0.25 0"></a-entity>
+          <a-entity position="0 2.25 -15" particle-system="preset: dust; texture: /nursery.png; color: #0000FF,#00FF00,#FF0000"></a-entity>
+          <a-entity id="model5" obj-model="obj: #obj5" rotation="0 270 0" position="0 0.25 0">
+            <a-animation
+              attribute="scale"
+              dur="3000"
+              easing="linear"
+              from="0.1 0.1 0.1"
+              to="0.2 0.2 0.2"
+              direction="alternate"
+              repeat="indefinite"
+            >
+            </a-animation>
+          </a-entity>
           <a-plane color="#C1273E" height="1.3" width="1.3" rotation="-90 0 0"></a-plane>
         </a-marker>
 
@@ -162,7 +184,7 @@
               dur="1000"
               easing="linear"
               from="0.1 0.1 0.1"
-              to="0.5 0.5 0.5"
+              to="0.3 0.3 0.3"
               direction="alternate"
               repeat="indefinite"
             >
