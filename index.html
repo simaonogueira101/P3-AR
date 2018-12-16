@@ -29,28 +29,27 @@
         </a-assets>
 
         <a-marker markerhandler type='pattern' url='/markers/tv.patt' id="animated-marker" emitevents="true" cursor="fuse: false; rayOrigin: mouse">
-            <a-entity id="model" obj-model="obj: #obj" scale="0.1 0.1 0.1" rotation="0 270 0" position="0 0.25 0"></a-entity>
+            <a-entity id="model" obj-model="obj: #obj" scale="0.05 0.05 0.05" rotation="0 270 0" position="0 0.25 0"></a-entity>
             <a-plane color="#4A7EA5" height="1.3" width="1.3" rotation="-90 0 0"></a-plane>
             <a-entity
               text="
-                value: nursery;
-                font: /fonts/sangbleuempireblack.fnt;
-                fontImage: /fonts/sangbleuempireblack.png;
-                width: 8;
+                value:
+                nursery nursery nursery
+                nursery nursery nursery
+                nursery nursery nursery
+                nursery nursery nursery
+                nursery nursery nursery
+                nursery nursery nursery
+                nursery nursery nursery
+                ;
+                font: /fonts/sunrise.fnt;
+                fontImage: /fonts/sunrise.png;
+                width: 6;
                 align: center
               "
               rotation="-90 0 0"
-              position="0 0.15 0"
+              position="0 0.01 -0.1"
               >
-              <a-animation
-                attribute="rotation"
-                dur="30000"
-                fill="forwards"
-                to="-90 360 0"
-                repeat="indefinite"
-                easing="linear"
-              >
-              </a-animation>
             </a-entity>
         </a-marker>
 
@@ -76,7 +75,7 @@
             >
             <a-animation
               attribute="text.opacity"
-              dur="500"
+              dur="800"
               easing="linear"
               from="0"
               to="1"
@@ -103,7 +102,7 @@
             >
             <a-animation
               attribute="text.opacity"
-              dur="500"
+              dur="800"
               easing="linear"
               from="0"
               to="1"
@@ -134,6 +133,32 @@
         <a-marker markerhandler3 type='pattern' url='/markers/tv3.patt' id="animated-marker3" emitevents="true" cursor="fuse: false; rayOrigin: mouse">
           <a-entity id="model3" obj-model="obj: #obj3" scale="0.1 0.1 0.1" rotation="0 270 0" position="0 0.25 0"></a-entity>
           <a-plane color="#FFDA71" height="1.3" width="1.3" rotation="-90 0 0"></a-plane>
+
+          <a-entity
+            id="entity3"
+            text="
+              value: He closed
+              the nursery door;
+              font: /fonts/sangbleuempireblack.fnt;
+              fontImage: /fonts/sangbleuempireblack.png;
+              align: center;
+              width: 10;
+              wrapCount: 50;
+              opacity: 0
+            "
+            rotation="-90 0 0"
+            position="0 0 0.5"
+            >
+            <a-animation
+              attribute="text.opacity"
+              dur="10000"
+              easing="linear"
+              from="0"
+              to="1"
+              direction="alternate"
+              repeat="indefinite">
+            </a-animation>
+          </a-entity>
         </a-marker>
 
         <a-marker markerhandler4 type='pattern' url='/markers/tv4.patt' id="animated-marker4" emitevents="true" cursor="fuse: false; rayOrigin: mouse">
@@ -149,14 +174,71 @@
             </a-animation>
           </a-entity>
           <a-plane color="#F28D3A" height="1.3" width="1.3" rotation="-90 0 0"></a-plane>
+
+          <a-entity
+            text="
+              value:
+              free to
+              ;
+              font: /fonts/sunrise.fnt;
+              fontImage: /fonts/sunrise.png;
+              width: 12;
+              align: center
+            "
+            rotation="-90 0 0"
+            position="0.1 0.01 -1"
+            >
+          </a-entity>
+          <a-entity
+            text="
+              value:
+              play in
+              ;
+              font: /fonts/sunrise.fnt;
+              fontImage: /fonts/sunrise.png;
+              width: 12;
+              align: center
+            "
+            rotation="-90 -90 0"
+            position="1 0.01 0.1"
+            >
+          </a-entity>
+          <a-entity
+            text="
+              value:
+              the
+              ;
+              font: /fonts/sunrise.fnt;
+              fontImage: /fonts/sunrise.png;
+              width: 12;
+              align: center
+            "
+            rotation="-90 -180 0"
+            position="0 0.01 1"
+            >
+          </a-entity>
+          <a-entity
+            text="
+              value:
+              nursery
+              ;
+              font: /fonts/sunrise.fnt;
+              fontImage: /fonts/sunrise.png;
+              width: 12;
+              align: center
+            "
+            rotation="-90 90 0"
+            position="-1 0.01 0"
+            >
+          </a-entity>
+
         </a-marker>
 
         <a-marker markerhandler5 type='pattern' url='/markers/tv5.patt' id="animated-marker5" emitevents="true" cursor="fuse: false; rayOrigin: mouse">
-          <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; texture: /nursery.png; color: #0000FF,#00FF00,#FF0000"></a-entity> -->
           <a-entity id="model5" obj-model="obj: #obj5" rotation="0 270 0" position="0 0.25 0">
             <a-animation
               attribute="scale"
-              dur="3000"
+              dur="10000"
               easing="linear"
               from="0.1 0.1 0.1"
               to="0.2 0.2 0.2"
@@ -165,6 +247,33 @@
             >
             </a-animation>
           </a-entity>
+
+          <a-entity
+            text="
+              value:
+              IIIIIIIIIIIIIlocked the nursery up
+              I loooooooooooocked the nursery up
+              I locked the nuuuuuuuuuuuursery up
+              I lockeeeeeeeeeeeed the nursery up
+              I locked the nnnnnnnnnnnnursery up
+              I locked the nurseryyyyyyyyyyyy up
+              I loccccccccccccked the nursery up
+              I locked thhhhhhhhhhhhe nursery up
+              I llllllllllllocked the nursery up
+              I locked the nursery upppppppppppp
+              I locked the nurrrrrrrrrrrrsery up
+              I lockkkkkkkkkkkked the nursery up
+              ;
+              font: /fonts/sunrise.fnt;
+              fontImage: /fonts/sunrise.png;
+              width: 24;
+              align: center
+            "
+            rotation="-90 0 0"
+            position="0 0.01 -0.1"
+            >
+          </a-entity>
+
           <a-plane color="#C1273E" height="1.3" width="1.3" rotation="-90 0 0"></a-plane>
         </a-marker>
 
@@ -204,7 +313,7 @@
               fontImage: /fonts/sangbleuempireblack.png;
               width: 10;
               wrapCount: 15;
-              align: left
+              align: left;
             "
             rotation="0 0 0"
             position="2.5 2.5 0"
